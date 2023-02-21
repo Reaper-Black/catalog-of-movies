@@ -1,0 +1,51 @@
+<body>
+    <div class="signupFrm">
+        <div class="wrapper">
+              <!---->
+            <form (submit)="signUp()"  class="form">
+                <h1 class="title">Registrate</h1>
+
+                <div class="inputContainer">
+                    <input type="text" [(ngModel)]="user.email" [ngModelOptions]="{standalone: true}" class="input" placeholder="a" required autofocus>
+                    <label for="" class="label">Correo</label>
+                </div>
+
+                <div class="inputContainer">
+                    <input type="text" [(ngModel)]="user.firstname" [ngModelOptions]="{standalone: true}" class="input" placeholder="a" required autofocus>
+                    <label for="" class="label">Nombre(s)</label>
+
+                </div> 
+
+                <div class="inputContainer">
+                    <input type="text" [(ngModel)]="user.lastname" [ngModelOptions]="{standalone: true}" class="input" placeholder="a" required autofocus>
+                    <label for="" class="label">Apellido(s)</label>
+                </div>
+
+                <div class="inputContainer">
+                    <input type="password" [(ngModel)]="user.password" [ngModelOptions]="{standalone: true}" class="input" placeholder="a" required autofocus>
+                    <label for="" class="label">Contraseña</label>
+                </div>
+
+                <div class="inputContainer">
+                    <input type="text" [(ngModel)]="user.date" [ngModelOptions]="{standalone: true}" class="input" placeholder="a" required autofocus>
+                    <label for="" class="label">Fecha de nacimiento</label>
+                </div>
+
+                <div class="inputContainer">
+                    <input type="number" [(ngModel)]="user.age" [ngModelOptions]="{standalone: true}" class="input" placeholder="a" required autofocus>
+                    <label for="" class="label">Edad</label>
+                </div>
+
+                <div class="inputContainer">
+                    <input type="text" [(ngModel)]="user.address" [ngModelOptions]="{standalone: true}" class="input" placeholder="a" required autofocus>
+                    <label for="" class="label">Dirección</label>
+                </div>
+
+                <div class="buttonsOn">
+                    <a href="login" class="backLogin">Regresar</a>
+                    <input type="submit" class="submitBtn" value="Registrarse">
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
