@@ -1,1 +1,19 @@
-<p>login works!</p>
+<body>
+    <div id="contenedor">
+        <div id="central">
+            <div id="login">
+                <div class="titulo">
+                    Movies On
+                </div>
+                <form (submit)="signIn()" class="form">
+                    <input type="text" [(ngModel)]="user.email" [ngModelOptions]="{standalone: true}" name="correo" placeholder="correo" required autofocus>
+                    <input type="password" [(ngModel)]="user.password" [ngModelOptions]="{standalone: true}" placeholder="Contraseña" name="password" required autofocus>
+                    <div class="pie-form">
+                        <button type="submit" title="Ingresar" name="Ingresar">Login</button>
+                        <a href="register" class="goRegister">Registrate</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
