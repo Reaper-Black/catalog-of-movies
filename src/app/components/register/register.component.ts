@@ -6,19 +6,15 @@ import Swal from 'sweetalert2'
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',
-  styleUrls: ['./register.component.css']
+  styleUrls: ['./register.component.scss']
 })
 export class RegisterComponent implements OnInit {
 
   user = {
     email: '',
-    firstname: '',
-    lastname: '',
+    nickname: '',
     password: '',
     rol: 'Usuario',
-    date: '',
-    age: '',
-    address: ''
   }
 
   securyPassword = /(?=(.*[0-9]))(?=.*[\!@#$%^&*()\\[\]{}\-_+=~`|:;"'<>,./?])(?=.*[a-z])(?=(.*[A-Z]))(?=(.*)).{8,}/;
