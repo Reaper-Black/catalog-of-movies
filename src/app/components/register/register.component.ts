@@ -45,7 +45,7 @@ export class RegisterComponent implements OnInit {
         res => {
           console.log(res);
           localStorage.setItem('token', res.token)
-          this.router.navigate(['/dashboard'])
+          this.router.navigate(['/home'])
           Swal.fire(
             'Cuenta Creada Correctamente',
             'Presiona OK',
