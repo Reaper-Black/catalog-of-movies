@@ -13,13 +13,23 @@ import { RegisterComponent } from './components/register/register.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment.prod';
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
+import { AboutComponent } from './components/about/about.component';
+import { ListMoviesComponent } from './components/list-movies/list-movies.component';
+import { ListUsersComponent } from './components/list-users/list-users.component';
+import { NewMoviesComponent } from './components/new-movies/new-movies.component';
+import { NewUsersComponent } from './components/new-users/new-users.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     RegisterComponent,
-    NavBarComponent
+    NavBarComponent,
+    AboutComponent,
+    ListMoviesComponent,
+    ListUsersComponent,
+    NewMoviesComponent,
+    NewUsersComponent
   ],
   imports: [
     BrowserModule,
