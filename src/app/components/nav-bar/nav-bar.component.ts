@@ -12,7 +12,7 @@ export class NavBarComponent implements OnInit {
     return this.authService.currentUser;
   }
 
-  constructor(public authService: AuthService) { }
+  constructor(public authService: AuthService) {}
 
   ngOnInit(): void {
   }

@@ -15,22 +15,8 @@
                         <label for="password">Contraseña: </label>
                         <input type="password" [(ngModel)]="user.password" [ngModelOptions]="{standalone: true}" name="password" required autofocus>
                     </div>
-                    <div class="form-item">
-                        <div class="checkbox">
-                            <input type="checkbox" id="rememberMeCheckbox" checked>
-                            <label for="rememberMeCheckbox" class="checkboxLabel">Recuerdame</label>
-                        </div>
-                    </div>
                     <button type="submit" title="Ingresar" name="Ingresar">Iniciar Sesión</button>
                     <button routerLink="/register" class="second-button">Registrate</button>
-                </div>
-                <div class="login-form-footer">
-                    <a href="#">
-                        <img width="30" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Facebook_f_logo_%282019%29.svg/2048px-Facebook_f_logo_%282019%29.svg.png" alt=""> Iniciar con Facebook
-                    </a>
-                    <a href="#">
-                        <img width="30" src="https://rotulosmatesanz.com/wp-content/uploads/2017/09/2000px-Google_G_Logo.svg_.png" alt=""> Iniciar con Google
-                    </a>
                 </div>
             </form>
         </div>

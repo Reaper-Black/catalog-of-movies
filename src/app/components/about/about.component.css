@@ -2,12 +2,13 @@
 
 body{
     font: 18px "Nunito", sans-serif;
-    color:black;
+    color: white;
     min-height: 100vh;
     padding: 2rem;
     display: flex;
     justify-content: center;
     align-items: center;
+    background: url("../../../assets/bg.jpg") no-repeat center;
 }
 
 body::before{
@@ -16,7 +17,6 @@ body::before{
     inset: 0;
     z-index: -1;
     pointer-events: none;
-    background: url("../../../assets/bg.jpg") no-repeat center;
     background-size: cover;
     animation: backgroundZoomAnimate 5s forwards;
 }

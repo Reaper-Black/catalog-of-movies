@@ -1,26 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Anton&family=Nunito:wght@300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@300&display=swap');
 
 body{
-    font: 18px "Nunito", sans-serif;
+    font-family: 18px 'Work Sans', sans-serif;
     color:black;
     min-height: 100vh;
     padding: 2rem;
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-body::before{
-    content: '';
-    position: fixed;
-    inset: 0;
-    z-index: -1;
-    pointer-events: none;
     background: url("../../../assets/bg2.jpg") no-repeat center;
-    background-size: cover;
-    animation: backgroundZoomAnimate 20s forwards;
 }
 
 .card-medium {
@@ -42,7 +30,7 @@ body::before{
 
   .title-medium {
     font-size: 250%;
-    font-family: 'Anton', sans-serif;
+    font-family: 'Work Sans', sans-serif;
     color:rgb(9, 90, 240);
     text-align: center;
     text-shadow: 0 3px 5px white ;
@@ -52,7 +40,7 @@ body::before{
 
   .title-full {
     font-size: 250%;
-    font-family: 'Anton', sans-serif;
+    font-family: 'Work Sans', sans-serif;
     color:rgb(16, 126, 93);
     text-align: center;
     text-shadow: 0 3px 5px white ;
@@ -63,7 +51,7 @@ body::before{
   .btn-new-products{
     display: block;
     margin-left: 1050px;
-    font-family: 'Anton', sans-serif;
+    font-family: 'Work Sans', sans-serif;
     padding: 15px 30px;
     border: none;
     background-color: #740606;
