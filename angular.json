@@ -13,7 +13,7 @@
                 "build": {
                     "builder": "@angular-devkit/build-angular:browser",
                     "options": {
-                        "allowedCommonJsDependencies": ["lodash"],
+                        "allowedCommonJsDependencies": ["lodash", "sweetalert2"],
                         "outputPath": "dist/movies-catalog",
                         "index": "src/index.html",
                         "main": "src/main.ts",
