@@ -29,6 +29,12 @@ export class AuthService {
     return !!localStorage.getItem('correo');
   }
 
+  obtainRole(){
+    const rol = localStorage.getItem('rol');
+    console.log('funcion obtainRole: ', rol)
+    return rol
+  }
+
   backSignIn() {
     return this.http.get(this.URL + '/signin').subscribe(
       res => {
@@ -47,9 +53,7 @@ export class AuthService {
   }
 
   logout(){
-    localStorage.removeItem('token'),
-    localStorage.removeItem('correo'),
-    localStorage.removeItem('rol'),
+    localStorage.clear(),
     this.router.navigate(['/login'])
   }
 }

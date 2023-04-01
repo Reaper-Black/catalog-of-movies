@@ -1,27 +1,37 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
         <a class="navbar-brand" href="#">Movie Header</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse d-flex justify-content-end" id="navbarSupportedContent">
-            <ul class="navbar-nav mb-2 mb-lg-0">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
 
-                <ng-container *ngIf="!authService.loggedIn(); else loggedIn">
-                    <li class="nav-item"><a class="nav-link active" aria-current="page" routerLink="/login">Iniciar Sesión</a></li>
-                    <li class="nav-item"><a class="nav-link active" aria-current="page" routerLink="/register">Registrarse</a>
-                    </li>
-                </ng-container>
-                <ng-template #loggedIn>
-                    <li><a class="nav-link active" aria-current="page" style="cursor:pointer" (click)="authService.logout()"> Desconectarse </a></li>
-                </ng-template>
-                <li class="nav-item"><a class="nav-link active" aria-current="page" routerLink="/about-us">Nosotros</a></li>
-                <li *ngIf="currentUser == 'Admin'"><a class="nav-link active" aria-current="page" routerLink="/movies"> Peliculas </a></li>
-                <li *ngIf="currentUser == 'Admin'"><a class="nav-link active" aria-current="page" routerLink="/list-movies"> Lista de Peliculas </a></li>
-                <li *ngIf="currentUser == 'Admin'"><a class="nav-link active" aria-current="page" routerLink="/create-user"> Usuarios </a></li>
-                <li *ngIf="currentUser == 'Admin'"><a class="nav-link active" aria-current="page" routerLink="/list-users"> Lista de Usuarios </a></li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" routerLink="/login">Iniciar Sesión</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" routerLink="/register">Registrarse</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" routerLink="/about-us">Nosotros</a>
+                </li>
+                <li class="nav-item" *ngIf="currentUser == 'Admin'">
+                    <a class="nav-link active" aria-current="page" routerLink="/movies"> Peliculas </a>
+                </li>
+                <li class="nav-item" *ngIf="currentUser == 'Admin'">
+                    <a class="nav-link active" aria-current="page" routerLink="/list-movies"> Lista de Peliculas </a>
+                </li>
+                <li class="nav-item" *ngIf="currentUser == 'Admin'">
+                    <a class="nav-link active" aria-current="page" routerLink="/create-user"> Usuarios </a>
+                </li>
+                <li class="nav-item" *ngIf="currentUser == 'Admin'">
+                    <a class="nav-link active" aria-current="page" routerLink="/list-users"> Lista de Usuarios </a>
+                </li>
 
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" style="cursor:pointer" (click)="logout()"> Desconectarse </a>
+                </li>
             </ul>
         </div>
     </div>

@@ -36,12 +36,20 @@ export class LoginComponent implements OnInit {
           localStorage.setItem('token', res.token)
           localStorage.setItem('correo', res.user.email)
           localStorage.setItem('rol', res.user.rol)
-          this.router.navigate(['/home']);
+
+
+          
+          this.router.navigate(['/home'])
+          
           Swal.fire(
             'Inicio de Sesión Correcto',
             'Presiona OK',
             'success'
-          )
+          ).then(res =>
+      
+            location.reload()
+          );
+         
         },
         err => {
           console.log(err)
