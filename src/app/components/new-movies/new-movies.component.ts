@@ -26,7 +26,9 @@ export class NewMoviesComponent {
       duracion: ['', Validators.required],
       director: ['', Validators.required],
       fecha_lanzamiento: ['', Validators.required],
-      descripcion: ['', Validators.required]
+      descripcion: ['', Validators.required],
+      elenco: ['', Validators.required],
+      imagen: ['', Validators.required]
     })
     this.id = this.aRouter.snapshot.paramMap.get('id');
   }
@@ -42,7 +44,9 @@ export class NewMoviesComponent {
       duracion: this.movieForm.get('duracion')?.value,
       director: this.movieForm.get('director')?.value,
       fecha_lanzamiento: this.movieForm.get('fecha_lanzamiento')?.value,
-      descripcion: this.movieForm.get('descripcion')?.value
+      descripcion: this.movieForm.get('descripcion')?.value,
+      elenco: this.movieForm.get('elenco')?.value,
+      imagen:this.movieForm.get('imagen')?.value
     }
 
     if (this.id !== null) {
@@ -83,7 +87,9 @@ export class NewMoviesComponent {
           duracion: data.duracion,
           director: data.director,
           fecha_lanzamiento: data.fecha_lanzamiento,
-          descripcion: data.descripcion
+          descripcion: data.descripcion,
+          elenco: data.elenco,
+          imagen: data.imagen
         })
       })
     }

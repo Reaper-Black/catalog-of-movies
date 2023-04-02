@@ -6,6 +6,7 @@
                     <div class="card-body text-center">
                         <span class="titulo"> {{ titulo | uppercase }}</span>
                         <form class="mt-3" [formGroup]="movieForm" (ngSubmit)="createMovie()">
+
                             <div class="inputContainer">
                                 <input type="text" formControlName="movie" class="form-control-lg" placeholder="Pelicula">
                                 <div class="text-danger"
@@ -13,6 +14,7 @@
                                     <span>El Nombre de la Pelicula <strong>es Obligatorio</strong></span>
                                 </div>
                             </div>
+
                             <div class="inputContainer">
                                 <input type="text" formControlName="categoria" class="form-control-lg" placeholder="Categoria">
                                 <div class="text-danger"
@@ -20,6 +22,7 @@
                                     <span>La Categoria <strong>es obligatoria</strong></span>
                                 </div>
                             </div>
+
                             <div class="inputContainer">
                                 <input type="text" formControlName="duracion" class="form-control-lg" placeholder="Duracion">
                                 <div class="text-danger"
@@ -27,6 +30,7 @@
                                     <span>La Duración <strong>es Obligatoria</strong></span>
                                 </div>
                             </div>
+
                             <div class="inputContainer">
                                 <input type="text" formControlName="director" class="form-control-lg" placeholder="Director">
                                 <div class="text-danger"
@@ -34,6 +38,7 @@
                                     <span>El Director <strong>es Obligatorio</strong></span>
                                 </div>
                             </div>
+
                             <div class="inputContainer">
                                 <input type="text" formControlName="fecha_lanzamiento" class="form-control-lg" placeholder="Fecha de Lanzamiento">
                                 <div class="text-danger"
@@ -41,13 +46,31 @@
                                     <span>La Fecha de Lanzamiento <strong>es Obligatoria</strong></span>
                                 </div>
                             </div>
+
                             <div class="inputContainer">
                                 <input type="text" formControlName="descripcion" class="form-control-lg" placeholder="Descripcion">
                                 <div class="text-danger"
                                     *ngIf="movieForm.get('descripcion')?.hasError('required') && movieForm.get('descripcion')?.touched">
-                                    <span>La Descripción <strong>es Obligatorias</strong></span>
+                                    <span>La Descripción <strong>es Obligatoria</strong></span>
                                 </div>
                             </div>
+
+                            <div class="inputContainer">
+                                <input type="text" formControlName="elenco" class="form-control-lg" placeholder="Elenco">
+                                <div class="text-danger"
+                                    *ngIf="movieForm.get('elenco')?.hasError('required') && movieForm.get('elenco')?.touched">
+                                    <span>El Elenco <strong>es Obligatorio</strong></span>
+                                </div>
+                            </div>
+
+                            <div class="inputContainer">
+                                <input type="text" formControlName="imagen" class="form-control-lg" placeholder="Imagen">
+                                <div class="text-danger"
+                                    *ngIf="movieForm.get('imagen')?.hasError('required') && movieForm.get('imagen')?.touched">
+                                    <span>La Imagen <strong>es Obligatoria</strong></span>
+                                </div>
+                            </div>
+
                             <div class="inputContainer">
                                 <button routerLink="/" class="btn-back">REGRESAR</button>
                                 <button type="submit" [disabled]="movieForm.invalid"
