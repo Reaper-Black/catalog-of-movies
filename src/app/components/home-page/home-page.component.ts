@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Movie } from 'src/app/models/movie';
+import { MoviesService } from 'src/app/services/movies.service';
 
 @Component({
   selector: 'app-home-page',
@@ -7,9 +9,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomePageComponent implements OnInit {
 
-  constructor() { }
+  listMovies: Movie[] = [];
 
-  ngOnInit(): void {
+  constructor(private _moviesService: MoviesService) { }
+
+  ngOnInit(): void {+
+    this.getMovies()
+  }
+
+  getMovies() {
+    this._moviesService.getMovies().subscribe(data => {
+      console.log(data);
+      this.listMovies = data;
+    }, error => {
+      console.log(error);
+    })
   }
 
 }
