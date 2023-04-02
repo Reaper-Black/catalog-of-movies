@@ -1,48 +1,66 @@
-<body>
-    <div class="container mt-5">
-        <div class="row">
-            <div class="col-lg-8 offset-lg-2">
-                <div class="card-full">
-                    <div class="card-body text-center">
-                        <span class="title-full">LISTADO DE PELICULAS A DETALLE</span>
-                        <button class="btn-new-products" routerLink="/movies">NUEVA PELICULA</button>
-                        <table *ngIf="listMovies.length > 0" class="table table-striped mt-3">
-                            <thead>
-                                <tr>
-                                    <th scope="col">Nombre</th>
-                                    <th scope="col">Categoria</th>
-                                    <th scope="col">Duración</th>
-                                    <th scope="col">Director</th>
-                                    <th scope="col">Fecha de Lanzamiento</th>
-                                    <th scope="col">Descripción</th>
-                                    <th scope="col">Elenco</th>
-                                    <th scope="col">Imagen</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr *ngFor="let movie of listMovies">
-                                    <td>{{ movie.nombre }}</td>
-                                    <td>{{ movie.categoria }}</td>
-                                    <td>{{ movie.duracion }}</td>
-                                    <td>{{ movie.director }}</td>
-                                    <td>{{ movie.fecha_lanzamiento }}</td>
-                                    <td>{{ movie.descripcion }}</td>
-                                    <td>{{ movie.elenco }}</td>
-                                    <td>{{ movie.imagen }}</td>
-
-                                    <td>
-                                        <i [routerLink]="['/edit-movie', movie._id]"
-                                            class="fas fa-edit text-primary"></i>
-                                        <i (click)="deleteMovie(movie._id)"
-                                            class="fas fa-trash text-danger"></i>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                        <h5 style="text-align: start; margin-top: 10px;" *ngIf="listMovies.length == 0">No hay peliculas para mostrar</h5>
-                    </div>
-                </div>
-            </div>
+<body class="d-flex justify-content-center align-items-center">
+    <div class="m-5 text-center">
+        <div class="d-flex align-items-center justify-content-evenly">
+            <span class="fs-1">Lista de Peliculas</span>
+            <button class="btn-new-products" routerLink="/movies">Agregar Pelicula</button>
         </div>
+
+        <table *ngIf="listMovies.length > 1" class="table table-striped mt-3 bg-light d-none d-lg-block">
+            <thead>
+                <tr>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Categoria</th>
+                    <th scope="col">Duración</th>
+                    <th scope="col">Director</th>
+                    <th scope="col">Fecha de Lanzamiento</th>
+                    <th scope="col">Descripción</th>
+                    <th scope="col">Elenco</th>
+                    <th scope="col">Imagen</th>
+                    <th scope="col">Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let movie of listMovies">
+                    <td>{{ movie.nombre }}</td>
+                    <td>{{ movie.categoria }}</td>
+                    <td>{{ movie.duracion }}</td>
+                    <td>{{ movie.director }}</td>
+                    <td>{{ movie.fecha_lanzamiento }}</td>
+                    <td>{{ movie.descripcion }}</td>
+                    <td>{{ movie.elenco }}</td>
+                    <td>{{ movie.imagen }}</td>
+
+                    <td>
+                        <i routerLink="/edit-movie/{{ movie._id }}" class="fas fa-edit text-primary"></i>
+                        <i (click)="deleteMovie(movie._id)" class="fas fa-trash text-danger"></i>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <table *ngIf="listMovies.length > 1" class="table table-striped mt-3 bg-light d-block d-lg-none">
+            <thead>
+                <tr>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Categoria</th>
+                    <th scope="col">Duración</th>
+                    <th scope="col">Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let movie of listMovies">
+                    <td>{{ movie.nombre }}</td>
+                    <td>{{ movie.categoria }}</td>
+                    <td>{{ movie.duracion }}</td>
+                    <td>
+                        <i routerLink="/edit-movie/{{ movie._id }}" class="fas fa-edit text-primary"></i>
+                        <i (click)="deleteMovie(movie._id)" class="fas fa-trash text-danger"></i>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h5 style="text-align: start; margin-top: 10px;" *ngIf="listMovies.length == 0">No hay peliculas para mostrar</h5>
+
     </div>
 </body>

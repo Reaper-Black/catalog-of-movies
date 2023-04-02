@@ -1,37 +1,55 @@
-<body>
-    <div class="container mt-5">
-      <div class="row">
-        <div class="col-lg-8 offset-lg-2">
-          <div class="card-full">
-            <div class="card-body text-center">
-              <span class="title-full">LISTADO DE USUARIOS A DETALLE</span>
-              <button class="btn-new-products" routerLink="/create-user">NUEVO USUARIO</button>
-              <table *ngIf="listUsers.length > 0" class="table table-striped mt-3">
-                <thead>
-                  <tr>
+<body class="d-flex justify-content-center align-items-center">
+    <div class="m-5">
+        <div class="d-flex align-items-center justify-content-evenly">
+            <span class="fs-1">Lista de Usuarios</span>
+            <button class="btn-new-products" routerLink="/movies">Agregar Pelicula</button>
+        </div>
+
+        <table *ngIf="listUsers.length > 1" class="table table-striped mt-5 bg-light d-none d-lg-block p-5">
+            <thead>
+                <tr>
                     <th scope="col">Correo</th>
                     <th scope="col">Nombre de Usuario</th>
                     <th scope="col">Contraseña</th>
                     <th scope="col">Rol</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr *ngFor="let user of listUsers">
+                    <th scope="col">Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let user of listUsers">
                     <td>{{ user.email }}</td>
                     <td>{{ user.nickname }}</td>
                     <td>{{ user.password }}</td>
                     <td>{{ user.rol }}</td>
                     <td>
-                        <i [routerLink]="['/edit-user', user._id]" class="fas fa-edit text-primary"></i>
+                        <i routerLink="/edit-user/{{ user._id }}" class="fas fa-edit text-primary"></i>
                         <i (click)="deleteUser(user._id)" class="fas fa-trash text-danger"></i>
                     </td>
-                  </tr>
-                </tbody>
-              </table>
-              <h5 style="text-align: start; margin-top: 10px;" *ngIf="listUsers.length == 0">No hay usuarios para mostrar</h5>
-            </div>
-          </div>
-        </div>
-      </div>
+                </tr>
+            </tbody>
+        </table>
+
+        <table *ngIf="listUsers.length > 1" class="table table-striped mt-3 bg-light d-block d-lg-none p-5">
+            <thead>
+                <tr>
+                    <th scope="col">Nombre de Usuario</th>
+                    <th scope="col">Rol</th>
+                    <th scope="col">Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let user of listUsers">
+                    <td>{{ user.nickname }}</td>
+                    <td>{{ user.rol }}</td>
+                    <td>
+                        <i routerLink="/edit-user/{{ user._id }}" class="fas fa-edit text-primary"></i>
+                        <i (click)="deleteUser(user._id)" class="fas fa-trash text-danger"></i>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h5 style="text-align: start; margin-top: 10px;" *ngIf="listUsers.length == 0">No hay usurios para mostrar</h5>
+
     </div>
-  </body>
+</body>

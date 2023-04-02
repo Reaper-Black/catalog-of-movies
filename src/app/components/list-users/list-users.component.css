@@ -1,57 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@300&display=swap');
-
-body{
+body {
     font-family: 18px 'Work Sans', sans-serif;
-    color:black;
+    color: black;
     min-height: 100vh;
-    padding: 2rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: url("../../../assets/bg3.jpg") no-repeat center;
+    background: url("../../../assets/bg4.png") center;
+    background-size: cover;
 }
 
-.card-medium {
-    table-layout: fixed;
-    width: 100%;
-    border-collapse: collapse;
-    border: 3px solid black;
-    background: white;
-    margin-bottom: 50px;
-  }
-
-  .card-full {
-    table-layout: fixed;
-    width: 100%;
-    border-collapse: collapse;
-    border: 3px solid black;
-    background: white;
-  }
-
-  .title-medium {
-    font-size: 250%;
-    font-family: 'Work Sans', sans-serif;
-    color:rgb(9, 90, 240);
-    text-align: center;
-    text-shadow: 0 3px 5px white ;
-    margin-top: -100px;
-    margin-left: 430px;
-  }
-
-  .title-full {
-    font-size: 250%;
-    font-family: 'Work Sans', sans-serif;
-    color:rgb(16, 126, 93);
-    text-align: center;
-    text-shadow: 0 3px 5px white ;
-    margin-top: -100px;
-    margin-left: 350px;
-  }
-
-  .btn-new-products{
-    display: block;
-    margin-left: 1050px;
-    font-family: 'Work Sans', sans-serif;
+.btn-new-products {
     padding: 15px 30px;
     border: none;
     background-color: #740606;
@@ -59,54 +15,15 @@ body{
     border-radius: 6px;
     cursor: pointer;
     font-size: 15px;
-    margin-top: -60px;
-  }
+}
 
-  .btn-new-products:hover {
+.btn-new-products:hover {
     background-color: #df1b1b;
     transform: translateY(-2px);
-  }
+}
 
-  thead th:nth-child(1) {
-    width: 40%;
-    color: rgb(0, 0, 0);
-  }
 
-  thead th:nth-child(2) {
-    width: 30%;
-    color: rgb(0, 0, 0);
-  }
-
-  thead th:nth-child(3) {
-    width: 40%;
-    color: rgb(0, 0, 0);
-  }
-
-  thead th:nth-child(4) {
-    width: 40%;
-    color: green;
-  }
-
-  thead th:nth-child(5) {
-    width: 40%;
-    color: rgb(0, 0, 0);
-  }
-
-  thead th:nth-child(6) {
-    width: 40%;
-    color: rgb(0, 0, 0);
-  }
-
-  thead th:nth-child(7) {
-    width: 40%;
-    color: rgb(0, 0, 0);
-  }
-
-  th, td {
-    padding: 30px;
-    font-family: 'Work Sans', sans-serif;
-    color: purple;
-  }
+/***   Botones editar y borrar    ***/
 
 .fas {
     cursor: pointer;
@@ -114,9 +31,9 @@ body{
 }
 
 .fa-edit {
-  color:blue;
+    color: blue;
 }
 
-.fa-trash{
-  color:rgb(240, 9, 9);
+.fa-trash {
+    color: rgb(240, 9, 9);
 }
