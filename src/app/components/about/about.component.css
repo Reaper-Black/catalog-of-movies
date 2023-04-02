@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Anton&family=Nunito:wght@300;400;500;700&display=swap');
-
-body{
+body {
     font: 18px "Nunito", sans-serif;
     color: white;
     min-height: 100vh;
@@ -9,28 +8,10 @@ body{
     justify-content: center;
     align-items: center;
     background: url("../../../assets/bg.jpg") no-repeat center;
-}
-
-body::before{
-    content: '';
-    position: fixed;
-    inset: 0;
-    z-index: -1;
-    pointer-events: none;
     background-size: cover;
-    animation: backgroundZoomAnimate 5s forwards;
 }
 
-@keyframes backgroundZoomAnimate {
-    from{
-        transform: scale(1);
-    }
-    to{
-        transform: scale(1.1);
-    }
-}
-
-.profile-card{
+.profile-card {
     box-shadow: 0 18px 200px -60px black;
     border-radius: 50px;
     width: 650px;
@@ -41,13 +22,12 @@ body::before{
     display: flex;
     flex-direction: column;
     gap: 40px;
-
-    @media screen and (max-width: 768px){
+    @media screen and (max-width: 768px) {
         width: auto;
     }
 }
 
-img{
+img {
     margin: auto;
     width: 200px;
     height: 200px;
@@ -57,59 +37,58 @@ img{
     box-shadow: 0 10px 60px -10px rgba(13, 28, 39, .5);
 }
 
-.profile-card_desc{
+.profile-card_desc {
     text-align: center;
     display: flex;
     flex-direction: column;
     gap: 25px;
 }
 
-.profile-card_desc h1{
+.profile-card_desc h1 {
     font-size: 2.5rem;
     font-weight: bold;
 }
 
-.profile-card_desc div{
-   font-size: 20px;
+.profile-card_desc div {
+    font-size: 20px;
 }
 
-.profile-card_info{
+.profile-card_info {
     display: flex;
     justify-content: center;
     gap: 50px;
-
     @media screen and (max-width: 576px) {
         gap: 30px;
     }
 }
 
-.profile-card_info div{
+.profile-card_info div {
     text-transform: uppercase;
     font-weight: bold;
     letter-spacing: 1px;
     text-align: center;
 }
 
-.profile-card_info div:first-child{
-   font-weight: bold;
-   letter-spacing: 3px;
-   font-size: 2rem;
-   margin-bottom: 15px;
+.profile-card_info div:first-child {
+    font-weight: bold;
+    letter-spacing: 3px;
+    font-size: 2rem;
+    margin-bottom: 15px;
 }
 
-.profile-card_info div:last-child{
+.profile-card_info div:last-child {
     font-size: 16px;
     opacity: .7;
- }
+}
 
-.profile-card_social{
+.profile-card_social {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
 }
 
-.profile-card_social a{
+.profile-card_social a {
     display: inline-flex;
     width: 55px;
     height: 55px;
@@ -123,54 +102,38 @@ img{
     transition: all .2s;
 }
 
-.profile-card_social a{
-    @media screen and(max-width: 768px){
+.profile-card_social a {
+    @media screen and(max-width: 768px) {
         width: 50px;
         height: 50px;
         margin: 10px;
     }
 }
-.profile-card_social a{
+
+.profile-card_social a {
     @media screen and(min-width: 768px) {
-        &:hover{
+        &:hover {
             transform: scale(1.2) translateY(-5px)
         }
     }
 }
 
-.facebook{
+.facebook {
     background: linear-gradient(45deg, #3b5998, #0078d7);
     box-shadow: 0 4px 30px rgba(43, 98, 169, 0.5);
 }
 
-.twitter{
+.twitter {
     background: linear-gradient(45deg, #1da1f2, #0e71c8);
     box-shadow: 0 4px 30px rgba(19, 127, 212, 0.7);
 }
 
-.instagram{
+.instagram {
     background: linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d);
     box-shadow: 0 4px 30px rgba(120, 64, 190, 0.6);
 }
 
-.github{
+.github {
     background: linear-gradient(45deg, #333333, #626b73);
     box-shadow: 0 4px 30px rgba(63, 65, 67, 0.6);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

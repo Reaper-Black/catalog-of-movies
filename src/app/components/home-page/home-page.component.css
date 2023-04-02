@@ -1,3 +1,14 @@
-.container {
-    width: 80vw !important;
+.movies {
+    background: linear-gradient(180deg, #000000, #3E065F, #700B97, #8E05C2) !important;
+    padding-top: 10vh !important;
+}
+
+.card-text {
+    text-align: justify !important;
+}
+
+h5,
+p {
+    color: #ffffff !important;
+    text-decoration: none !important;
 }
