@@ -9,7 +9,8 @@ import { MoviesService } from 'src/app/services/movies.service';
 })
 export class HomePageComponent implements OnInit {
 
-  listMovies: Movie[] = [];
+  movies: Movie[] = [];
+    
 
   constructor(private _moviesService: MoviesService) { }
 
@@ -20,7 +21,7 @@ export class HomePageComponent implements OnInit {
   getMovies() {
     this._moviesService.getMovies().subscribe(data => {
       console.log(data);
-      this.listMovies = data;
+      this.movies = data;
     }, error => {
       console.log(error);
     })

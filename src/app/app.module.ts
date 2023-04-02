@@ -5,6 +5,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule, HTTP_INTERCEPTORS } from "@angular/common/http";
 import { AuthGuard } from "./auth.guard";
 import { TokenService } from "./services/token.service";
+import { CommonModule } from '@angular/common'
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -18,6 +19,7 @@ import { ListMoviesComponent } from './components/list-movies/list-movies.compon
 import { ListUsersComponent } from './components/list-users/list-users.component';
 import { NewMoviesComponent } from './components/new-movies/new-movies.component';
 import { NewUsersComponent } from './components/new-users/new-users.component';
+import { HomePageComponent } from './components/home-page/home-page.component';
 
 @NgModule({
   declarations: [
@@ -29,10 +31,12 @@ import { NewUsersComponent } from './components/new-users/new-users.component';
     ListMoviesComponent,
     ListUsersComponent,
     NewMoviesComponent,
-    NewUsersComponent
+    NewUsersComponent,
+    HomePageComponent
   ],
   imports: [
     BrowserModule,
+    CommonModule,
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
