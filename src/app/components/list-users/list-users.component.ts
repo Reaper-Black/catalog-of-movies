@@ -30,7 +30,7 @@ export class ListUsersComponent {
   }
 
   deleteUser(id: any) {
-    this._userService.deleteUser(id).subscribe(data => {
+
       Swal.fire({
         title: 'Seguro de eliminar este usuario?',
         text: "No podrás revertir esto despues!!",
@@ -41,6 +41,13 @@ export class ListUsersComponent {
         confirmButtonText: 'Si, eliminalo!'
       }).then((result) => {
         if (result.isConfirmed) {
+
+          this._userService.deleteUser(id).subscribe(data => {
+            this.getUsers();
+          }, error => {
+            console.log(error);
+          })
+          
           Swal.fire(
             'El usuario fue eliminado con exito!',
             'Usuario Eliminado',
@@ -48,10 +55,11 @@ export class ListUsersComponent {
           )
         }
       })
-      this.getUsers();
-    }, error => {
-      console.log(error);
-    })
+
+
+
+
+
   }
 
 }

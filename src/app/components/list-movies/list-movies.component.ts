@@ -30,7 +30,7 @@ export class ListMoviesComponent {
   }
 
   deleteMovie(id: any) {
-    this._moviesService.deleteMovie(id).subscribe(data => {
+
       Swal.fire({
         title: 'Seguro de eliminar este producto?',
         text: "No podrás revertir esto despues!!",
@@ -41,6 +41,13 @@ export class ListMoviesComponent {
         confirmButtonText: 'Si, eliminalo!'
       }).then((result) => {
         if (result.isConfirmed) {
+
+          this._moviesService.deleteMovie(id).subscribe(data => {
+            this.getMovies();
+          }, error => {
+            console.log(error);
+          })
+
           Swal.fire(
             'La pelicula fue eliminada con exito!',
             'Pelicula Eliminada',
@@ -48,10 +55,6 @@ export class ListMoviesComponent {
           )
         }
       })
-      this.getMovies();
-    }, error => {
-      console.log(error);
-    })
   }
 
 }

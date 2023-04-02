@@ -8,41 +8,36 @@
                         <form class="mt-3" [formGroup]="userForm" (ngSubmit)="createUser()">
 
                             <div class="inputContainer">
-                                <input type="text" formControlName="email" class="form-control-lg" placeholder="Correo">
-                                <div class="text-danger"
-                                    *ngIf="userForm.get('email')?.hasError('required') && userForm.get('email')?.touched">
+                                <input type="email" formControlName="email" class="form-control-lg" placeholder="Correo">
+                                <div class="text-danger" *ngIf="userForm.get('email')?.hasError('required') && userForm.get('email')?.touched">
                                     <span>El Email es <strong>Obligatorio</strong></span>
                                 </div>
                             </div>
 
                             <div class="inputContainer">
                                 <input type="text" formControlName="nickname" class="form-control-lg" placeholder="Nombre de Usuario">
-                                <div class="text-danger"
-                                    *ngIf="userForm.get('nickname')?.hasError('required') && userForm.get('nickname')?.touched">
+                                <div class="text-danger" *ngIf="userForm.get('nickname')?.hasError('required') && userForm.get('nickname')?.touched">
                                     <span>El Nombre de Usuario es <strong>Obligatorio</strong></span>
                                 </div>
                             </div>
 
                             <div class="inputContainer">
                                 <input type="password" formControlName="password" class="form-control-lg" placeholder="Contraseña">
-                                <div class="text-danger"
-                                    *ngIf="userForm.get('password')?.hasError('required') && userForm.get('password')?.touched">
+                                <div class="text-danger" *ngIf="userForm.get('password')?.hasError('required') && userForm.get('password')?.touched">
                                     <span>La Contraseña es <strong>Obligatoria</strong></span>
                                 </div>
                             </div>
 
                             <div class="inputContainer">
                                 <input type="text" formControlName="rol" class="form-control-lg" placeholder="Rol del Usuario">
-                                <div class="text-danger"
-                                    *ngIf="userForm.get('rol')?.hasError('required') && userForm.get('rol')?.touched">
+                                <div class="text-danger" *ngIf="userForm.get('rol')?.hasError('required') && userForm.get('rol')?.touched">
                                     <span>El Rol es <strong>Muy Necesario</strong></span>
                                 </div>
                             </div>
 
                             <div class="inputContainer">
                                 <button routerLink="/" class="btn-back">REGRESAR</button>
-                                <button type="submit" [disabled]="userForm.invalid"
-                                    class="btn-success">ACEPTAR</button>
+                                <button type="submit" [disabled]="userForm.invalid" class="btn-success">ACEPTAR</button>
                             </div>
                         </form>
                     </div>
