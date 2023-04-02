@@ -8,8 +8,9 @@ export class Movie {
     descripcion: String;
     elenco: String;
     imagen: String;
+    link: String;
 
-    constructor(nombre: string, categoria: string, duracion: string, director: string, fecha_lanzamiento: string, descripcion: string, elenco: string, imagen: string){
+    constructor(nombre: string, categoria: string, duracion: string, director: string, fecha_lanzamiento: string, descripcion: string, elenco: string, imagen: string, link: string){
         this.nombre = nombre;
         this.categoria = categoria;
         this.duracion = duracion;
@@ -18,5 +19,6 @@ export class Movie {
         this.descripcion = descripcion;
         this.elenco = elenco;
         this.imagen = imagen;
+        this.link = link;
     }
 }

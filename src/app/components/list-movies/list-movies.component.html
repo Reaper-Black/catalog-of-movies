@@ -16,6 +16,7 @@
                     <th scope="col">Descripción</th>
                     <th scope="col">Elenco</th>
                     <th scope="col">Imagen</th>
+                    <th scope="col">Link</th>
                     <th scope="col">Acciones</th>
                 </tr>
             </thead>
@@ -29,6 +30,7 @@
                     <td>{{ movie.descripcion }}</td>
                     <td>{{ movie.elenco }}</td>
                     <td>{{ movie.imagen }}</td>
+                    <td>{{ movie.link }}</td>
 
                     <td>
                         <i routerLink="/edit-movie/{{ movie._id }}" class="fas fa-edit text-primary"></i>

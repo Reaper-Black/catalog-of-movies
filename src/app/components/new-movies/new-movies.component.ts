@@ -28,7 +28,8 @@ export class NewMoviesComponent {
       fecha_lanzamiento: ['', Validators.required],
       descripcion: ['', Validators.required],
       elenco: ['', Validators.required],
-      imagen: ['', Validators.required]
+      imagen: ['', Validators.required],
+      link: ['',Validators.required]
     })
     this.id = this.aRouter.snapshot.paramMap.get('id');
   }
@@ -46,7 +47,8 @@ export class NewMoviesComponent {
       fecha_lanzamiento: this.movieForm.get('fecha_lanzamiento')?.value,
       descripcion: this.movieForm.get('descripcion')?.value,
       elenco: this.movieForm.get('elenco')?.value,
-      imagen:this.movieForm.get('imagen')?.value
+      imagen:this.movieForm.get('imagen')?.value,
+      link:this.movieForm.get('link')?.value
     }
 
     if (this.id !== null) {
@@ -89,7 +91,8 @@ export class NewMoviesComponent {
           fecha_lanzamiento: data.fecha_lanzamiento,
           descripcion: data.descripcion,
           elenco: data.elenco,
-          imagen: data.imagen
+          imagen: data.imagen,
+          link: data.link
         })
       })
     }

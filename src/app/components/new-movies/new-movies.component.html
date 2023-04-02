@@ -63,6 +63,13 @@
                     </div>
                 </div>
 
+                <div class="m-3 input-small">
+                    <input type="text" formControlName="link" class="form-control" placeholder="Link">
+                    <div class="text-danger" *ngIf="movieForm.get('link')?.hasError('required') && movieForm.get('link')?.touched">
+                        <span>El Link <strong>es Obligatorio</strong></span>
+                    </div>
+                </div>
+
             </div>
 
             <div class="mt-5 d-flex flex-row align-items-center justify-content-evenly">
