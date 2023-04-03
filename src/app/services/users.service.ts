@@ -8,27 +8,28 @@ import { User } from '../models/user';
 })
 export class UsersService {
 
-  url = 'http://localhost:3000/movie-header/users/'
+  //url = 'http://localhost:3000/movie-header/users/'
+  private URL = 'https://backend-production-4ddd.up.railway.app/users/'
 
   constructor(private http: HttpClient) { }
 
   getUsers(): Observable<any> {
-    return this.http.get(this.url + 'getuser');
+    return this.http.get(this.URL + 'getuser');
   }
 
   deleteUser(id: string): Observable<any> {
-    return this.http.delete(this.url + id);
+    return this.http.delete(this.URL + id);
   }
 
   saveUser(user: User): Observable<any> {
-    return this.http.post(this.url + 'newuser', user);
+    return this.http.post(this.URL + 'newuser', user);
   }
 
   getUser(id: string): Observable<any> {
-    return this.http.get(this.url + id);
+    return this.http.get(this.URL + id);
   }
 
   editUser(id: string, user: User): Observable<any> {
-    return this.http.put(this.url + id, user);
+    return this.http.put(this.URL + id, user);
   }
 }

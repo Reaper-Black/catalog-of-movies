@@ -7,7 +7,8 @@ import { Router } from "@angular/router";
 })
 export class AuthService {
 
-  private URL = 'http://localhost:3000/movie-header'
+  //private URL = 'http://localhost:3000/movie-header'
+  private URL = 'https://backend-production-4ddd.up.railway.app/movie-header'
   public currentUser;
 
   constructor(

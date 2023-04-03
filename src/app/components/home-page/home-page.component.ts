@@ -10,7 +10,6 @@ import { MoviesService } from 'src/app/services/movies.service';
 export class HomePageComponent implements OnInit {
 
   movies: Movie[] = [];
-    
 
   constructor(private _moviesService: MoviesService) { }
 
@@ -26,5 +25,4 @@ export class HomePageComponent implements OnInit {
       console.log(error);
     })
   }
-
 }

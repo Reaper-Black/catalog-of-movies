@@ -9,12 +9,14 @@ import { NewMoviesComponent } from './components/new-movies/new-movies.component
 import { ListMoviesComponent } from './components/list-movies/list-movies.component';
 import { NewUsersComponent } from './components/new-users/new-users.component';
 import { ListUsersComponent } from './components/list-users/list-users.component';
+import { ViewMoviesComponent } from './components/view-movies/view-movies.component';
 
 const routes: Routes = [
   { path: '', pathMatch:'full', redirectTo:'/home' },
   { path: 'home', component: HomePageComponent },
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
+  { path: 'watch-movie/:id', component: ViewMoviesComponent },
   { path: 'about-us', component: AboutComponent },
   { path: 'movies', component: NewMoviesComponent, canActivate: [AuthGuard] },
   { path: 'edit-movie/:id', component: NewMoviesComponent },

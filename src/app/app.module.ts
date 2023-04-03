@@ -20,6 +20,7 @@ import { ListUsersComponent } from './components/list-users/list-users.component
 import { NewMoviesComponent } from './components/new-movies/new-movies.component';
 import { NewUsersComponent } from './components/new-users/new-users.component';
 import { HomePageComponent } from './components/home-page/home-page.component';
+import { ViewMoviesComponent } from './components/view-movies/view-movies.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { HomePageComponent } from './components/home-page/home-page.component';
     ListUsersComponent,
     NewMoviesComponent,
     NewUsersComponent,
-    HomePageComponent
+    HomePageComponent,
+    ViewMoviesComponent
   ],
   imports: [
     BrowserModule,
