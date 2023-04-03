@@ -9,7 +9,7 @@ import { Movie } from '../models/movie';
 export class MoviesService {
   
   //URL = 'http://localhost:3000/movie-header/movies/'
-  private URL = 'https://backend-production-4ddd.up.railway.app/movies/'
+  private URL = 'https://backend-production-4ddd.up.railway.app/movie-header/movies/'
 
   constructor(private http: HttpClient) { }
 

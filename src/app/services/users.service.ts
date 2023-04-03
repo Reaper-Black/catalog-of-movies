@@ -9,7 +9,7 @@ import { User } from '../models/user';
 export class UsersService {
 
   //url = 'http://localhost:3000/movie-header/users/'
-  private URL = 'https://backend-production-4ddd.up.railway.app/users/'
+  private URL = 'https://backend-production-4ddd.up.railway.app/movie-header/users/'
 
   constructor(private http: HttpClient) { }
 
